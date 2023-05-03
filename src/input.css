@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body{
+        @apply text-base font-poppins
+    }
+
+    input{
+        @apply mobile:h-[50px] w-full rounded-sm border border-grayish-blue font-semi-bold pl-5
+    }
+}
+
+@layer component {
+    .bg-mobile{
+        background-image: url("../dist/images/bg-intro-mobile.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-laptop{
+        background-image: url("../dist/images/bg-intro-desktop.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

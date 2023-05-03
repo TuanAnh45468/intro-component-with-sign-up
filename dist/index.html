@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- displays site properly based on user's device -->
 
-  <link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="output.css" rel="stylesheet">
-  <title>Frontend Mentor | Intro component with sign up form</title>
-  
-</head>
-<body>
-  Learn to code by watching others
+    <link
+      href="images/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="output.css" rel="stylesheet" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body class="flex min-h-screen flex-col items-center justify-center bg-red mobile:bg-mobile laptop:bg-laptop">
+    <main class="grid mobile:gap-y-8 mobile:w-[335px]">
+      <div class="flex flex-col gap-y-4">
+        <h1 class="text-center mobile:text-3xl font-bold text-white">Learn to code by watching others</h1>
+        <p class="text-center text-white">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+      <button class="flex shadow-2xl mobile:w-full items-center justify-center rounded-lg px-9 text-center text-grayish-blue bg-blue h-[84px] hover:bg-dark-blue hover:text-white"> <span><strong>Try it free 7 days</strong> then $20/mo. thereafter</span> </button>
 
-  Try it free 7 days then $20/mo. thereafter
+        <form class="flex shadow-2xl flex-col gap-y-4 mobile:w-[335px] bg-white rounded-xl px-5 py-5">
+          <div>
+            <label for="firstName"></label>
+            <input id="firstName" name="firstName" placeholder="First Name" type="text">
+          </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+          <div>
+            <label for="lastName"></label>
+            <input id="lastName" name="lastName" placeholder="Last Name" type="text">
+          </div>
 
-  Claim your free trial 
+          <div>
+            <label for="email"></label>
+            <input id="email" name="email" placeholder="Email Address" type="email">
+          </div>
+          <div>
 
-  By clicking the button, you are agreeing to our Terms and Services
-</body>
+            <label for="password"></label>
+            <input id="password" name="password" placeholder="Password" type="password">
+          </div>
+
+          <button class="h-[50px] bg-green hover:bg-light-green rounded-lg font-bold text-white uppercase">Claim your free trial</button>
+          <small class="text-grayish-blue">
+            By clicking the button, you are agreeing to our <span class="text-red font-semi-bold">Terms and Services</span>
+          </small>
+        </form>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
