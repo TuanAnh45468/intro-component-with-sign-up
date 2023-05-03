@@ -11,12 +11,10 @@
       sizes="32x32"
       type="image/png"
     />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <link href="output.css" rel="stylesheet" />
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
@@ -31,30 +29,38 @@
         </p>
       </div>
 
-      <button class="flex shadow-2xl mobile:w-full items-center justify-center rounded-lg px-9 text-center text-grayish-blue bg-blue h-[84px] hover:bg-dark-blue hover:text-white"> <span><strong>Try it free 7 days</strong> then $20/mo. thereafter</span> </button>
+      <button class="flex mobile:w-full items-center justify-center rounded-lg px-9 text-center shadow-2xl text-grayish-blue bg-blue h-[84px] hover:bg-dark-blue hover:text-white"> <span><strong>Try it free 7 days</strong> then $20/mo. thereafter</span> </button>
 
-        <form class="flex shadow-2xl flex-col gap-y-4 mobile:w-[335px] bg-white rounded-xl px-5 py-5">
-          <div>
+        <form class="flex flex-col gap-y-4 rounded-xl bg-white px-5 py-5 shadow-2xl mobile:w-[335px]" id="form">
+          <div class="relative flex flex-col">
             <label for="firstName"></label>
             <input id="firstName" name="firstName" placeholder="First Name" type="text">
+            <small class="ml-auto hidden text-xs italic text-red" id="firstNameError">First name cannot be empty</small>
+            <img alt="" class="absolute w-[24px] h-[24px] top-[25%] right-[15px] hidden" id="firstNameSvg" src="images/icon-error.svg">
           </div>
 
-          <div>
+          <div class="relative flex flex-col">
             <label for="lastName"></label>
             <input id="lastName" name="lastName" placeholder="Last Name" type="text">
+            <small class="ml-auto hidden text-xs italic text-red" id="lastNameError">Last name cannot be empty</small>
+            <img alt="" class="absolute w-[24px] h-[24px] top-[25%] right-[15px] hidden" id="lastNameSvg" src="images/icon-error.svg">
           </div>
 
-          <div>
+          <div class="relative flex flex-col">
             <label for="email"></label>
-            <input id="email" name="email" placeholder="Email Address" type="email">
+            <input id="email" name="email" placeholder="email@example.com" type="text">
+            <small class="ml-auto hidden text-xs italic text-red" id="emailError">Look like this is not an email</small>
+            <img alt="" class="absolute w-[24px] h-[24px] top-[25%] right-[15px] hidden" id="emailSvg" src="images/icon-error.svg">
           </div>
-          <div>
 
+          <div class="relative flex flex-col">
             <label for="password"></label>
             <input id="password" name="password" placeholder="Password" type="password">
+            <small class="ml-auto hidden text-xs italic text-red" id="passwordError">Password cannot be empty</small>
+            <img alt="" class="absolute w-[24px] h-[24px] top-[25%] right-[15px] hidden" id="passwordSvg" src="images/icon-error.svg">
           </div>
 
-          <button class="h-[50px] bg-green hover:bg-light-green rounded-lg font-bold text-white uppercase">Claim your free trial</button>
+          <button class="rounded-lg font-bold uppercase text-white h-[50px] bg-green hover:bg-light-green" type="submit">Claim your free trial</button>
           <small class="text-grayish-blue">
             By clicking the button, you are agreeing to our <span class="text-red font-semi-bold">Terms and Services</span>
           </small>
