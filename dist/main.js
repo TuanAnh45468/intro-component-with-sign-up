@@ -58,10 +58,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailValue = emailInput.value.trim();
     const isEmail = validator.isEmail(emailValue);
 
+    if (firstNameInput.value.trim() === "") {
+      firstNameSvg.classList.remove("hidden");
+      firstNameInput.classList.add("border-red");
+      firstNameError.classList.remove("hidden");
+      return;
+    }
+
+    if (lastNameInput.value.trim() === "") {
+      lastNameSvg.classList.remove("hidden");
+      lastNameInput.classList.add("border-red");
+      lastNameError.classList.remove("hidden");
+      return;
+    }
+
     if (!isEmail) {
       emailSvg.classList.remove("hidden");
       emailInput.classList.add("border-red");
       emailError.classList.remove("hidden");
+      return;
+    }
+
+    if (passwordInput.value.trim() === "") {
+      passwordSvg.classList.remove("hidden");
+      passwordInput.classList.add("border-red");
+      passwordError.classList.remove("hidden");
+      return;
     }
 
     alert("Submitted");
